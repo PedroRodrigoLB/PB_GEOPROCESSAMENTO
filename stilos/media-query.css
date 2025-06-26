@@ -11,8 +11,8 @@ Grandes telas: acima de 1200px
 
 @media screen and (max-width: 768px) {   
     i#burguer{
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         display: block;
         text-align: center;
         padding: 10px;
@@ -31,6 +31,14 @@ Grandes telas: acima de 1200px
     }
     header > div > menu{
         display: none;
+        background-color: white;
+    }
+    header > div > menu > ul > li{
+        padding: 5px;
+    }
+    
+    header > div > menu > ul > li > a {
+        color: black;
     }
 }
 
