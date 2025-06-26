@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints 
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet:768px até 992px
+Desktop:992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (max-width: 768px) {   
+    i#burguer{
+        background-color: rgb(48,48,48);
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    i#burguer:hover{
+        background-color: white;
+        color: black;
+    }
+    header > div{
+        text-align: center;
+    }
+    header > div > img {
+        height: 80px;
+        padding: 5px;
+    }
+    header > div > menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    i#burguer{
+        display: none;
+    }
+    header > div > menu{
+        display: block;
+    }
+    header > div > menu > ul > li {
+        display: inline-block;
+    }
+    
+}
+
+@media screen and (min-width: 992px){
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #08313D;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.521);
+    }
+    header > div{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    header > div > img {
+        height: 80px;
+        padding: 5px;
+    }
+    header > div > menu{
+        display: inline-flex;
+        list-style: none;
+        margin: auto 0;
+    }
+    header > div > menu > ul > li > a:hover {
+        color: gold;
+    }
+    main {
+        margin: 60px auto;
+        padding: 10px;
+    }
+    main > section > h2 {
+        text-align: center;
+        padding: 10px;
+        font-size: 2em;
+        font-family: Cambria Math, serif;
+    }
+    main > section > p {
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+        font-size: 1.2em;
+        text-align: justify;
+    }
+    main > section > div {
+        display: flex;
+        flex-flow: wrap nowrap;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+    main > section > div > img {
+        width: 250px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+    main > section > div > p {
+        width: 530px;
+        padding: 10px;
+        margin: auto 0;
+        font-size: 1.2em;
+        text-align: justify;
+    }
+    #conteiner { 
+        padding: 10px;
+        margin: 20px auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #cartao {
+        background-color: white;
+        margin: 10px;
+        padding: 20px;
+        width: calc(20% - 10px);
+        height: 200px;
+        border-radius: 8px;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.521);
+        align-items: center;
+    }
+    #info {
+        width: 350px;
+        height: 150px;
+        padding: 10px;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 1.2em;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247);
+    }
+    #info > h3 {
+        padding: 10px;
+        margin-top: 30px;
+    }
+    #info > p {
+        font-size: 0.8em;
+    }
+    form {
+        width: 60%;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247);
+    }
+    form > div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    form > div > p#formulario {   
+        text-align: center;
+    }
+    form > div > p#formulario > input{
+        padding: 10px;
+        border-radius: 5px;
+    }
+    form > p#texto{
+        text-align: center;
+    }
+    form > p#texto > textarea{
+        padding: 10px;
+        width: 96%;
+        height: 150px;
+        margin: auto;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    form > p#botao {
+        padding: 10px;
+        text-align: center;
+    }
+    form > p#botao > input{
+        padding: 10px;
+        margin: auto 20px;
+        width: 150px;
+        background-color: #08313D;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    footer {
+        background-color: #08313D;
+        padding-bottom: 50px;
+        text-align: center;
+        border-top: 2px solid black;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.521);
+    }
+    footer > img {
+        width: 150px;
+        margin: 10px;
+    }
+    footer > p#efeito{
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    footer > p {
+        font-size: 0.8em;
+        color: white;
+    }
+    footer > p > a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media screen and (min-width:1200px){
+}
+
+@media screen and (min-width: 1600px){
+    
+}

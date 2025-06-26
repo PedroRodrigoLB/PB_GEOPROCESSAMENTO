@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Rodrigo Leal de Barros - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #34495e;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .projeto {
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .projeto:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <h1>Pedro Rodrigo Leal de Barros</h1>
+        <p>Engenheiro Agrícola | Desenvolvedor Full Stack | Analista de Dados</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <section id="sobre" class="fade-in">
+        <h2>Sobre Mim</h2>
+        <p>Sou Engenheiro Agrícola apaixonado por tecnologia, desenvolvimento web e análise de dados. Tenho experiência com Python, geoprocessamento e desenvolvimento full stack.</p>
+    </section>
+    
+    <section id="projetos" class="fade-in">
+        <h2>Projetos</h2>
+        <button id="toggleProjetos">Mostrar/Ocultar Projetos</button>
+        <div id="projetosLista">
+            <div class="projeto">
+                <h3>Projeto 1 - Análise de Dados Agrícolas</h3>
+                <p>Utilizei Python e Pandas para analisar dados agrícolas e gerar insights valiosos.</p>
+                <a href="#">Ver no GitHub</a>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2 - Sistema Web para Monitoramento de Culturas</h3>
+                <p>Desenvolvi um sistema utilizando React e Node.js para monitoramento de culturas agrícolas.</p>
+                <a href="#">Ver no GitHub</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <p>Email: pedro.rodrigo.lealbarros@outlook.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/pedro-leal-barros/">Meu LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/PedroRodrigoLB">Meu GitHub</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Pedro Rodrigo Leal de Barros. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("toggleProjetos").addEventListener("click", function() {
+            const projetosLista = document.getElementById("projetosLista");
+            if (projetosLista.style.display === "none" || projetosLista.style.display === "") {
+                projetosLista.style.display = "block";
+            } else {
+                projetosLista.style.display = "none";
+            }
+        });
+
+        // Animações de rolagem
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            function checkScroll() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < window.innerHeight * 0.85) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", checkScroll);
+            checkScroll();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

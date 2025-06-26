@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos/global.css">
+    <link rel="stylesheet" href="stilos/media-query.css">
+    <link rel="shortcut icon" href="imagens/favicon_io/favicon.ico" type="image/x-icon">
+    <title>PB GEOPROCESSAMENTO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="imagens/Simbolo_logo_02.png" alt="Simbolo da empresa PB GEOPROCESSAMENTO">
+            <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+            <menu id="itens">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="portifolio.html">Portfólio</a></li>
+                </ul>
+            </menu>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <img src="imagens/PB_GEOPROCESSAMENTO.png" alt="Logo da empresa PB GEOPROCESSAMENTO">
+                <p>Somos uma empresa especializada em soluções geotecnológicas, oferecendo serviços de mapeamento, sensoriamento remoto, geoprocessamento e análise espacial. Atuamos com precisão e inovação para atender às demandas dos setores agrícola, ambiental, urbano e industrial. Nosso compromisso é transformar dados geográficos em inteligência para apoiar decisões estratégicas com eficiência e responsabilidade.</p>
+            </div>
+        </section>
+        <section id="servicos">
+            <h2>SERVIÇOS</h2>
+            <div id="conteiner">
+                <div id="cartao">
+                    <h2 >Coleta e Análise de Dados Geoespaciais</h2>
+                    <p>Obtenção e análise de informações precisas sobre locais e regiões.</p>
+                </div>
+                <div id="cartao">
+                    <h2>Cartografia e Geoprocessamento</h2>
+                    <p>Criação de mapas claros e informativos para auxiliar na tomada de decisões.</p>
+                </div>
+                <div id="cartao">
+                    <h2>Agrícultura de precisão</h2>
+                    <p></p>
+                </div>
+                <div id="cartao">
+                    <h2>Consultoria em Geotecnologia</h2>
+                    <p>Compartilho conhecimento, capacitando indivíduos no uso eficiente de ferramentas e técnicas SIG.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>MAPAS</h2>
+            <div>
+                <p>Os mapas de geoprocessamento são ferramentas poderosas que permitem visualizar e interpretar dados espaciais de maneira clara e estratégica. Através da integração de informações geográficas com dados quantitativos e qualitativos, esses mapas transformam grandes volumes de dados em insights valiosos para tomada de decisões.</p>
+                <img src="" alt="">
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>Utilizando softwares como QGIS, ArcGIS e plataformas baseadas em SIG (Sistemas de Informações Geográficas), é possível representar fenômenos complexos como uso e ocupação do solo, áreas de risco ambiental, produtividade agrícola, distribuição populacional, entre outros. A visualização espacial desses dados facilita a identificação de padrões, tendências e relações que muitas vezes passariam despercebidos em análises tradicionais.</p>
+            </div>
+            <div>
+                <p>Dessa forma, os mapas de geoprocessamento não são apenas representações gráficas, mas ferramentas analíticas que apoiam a gestão territorial, o planejamento estratégico e a solução de problemas em diversas áreas, como agricultura, meio ambiente, infraestrutura, logística e urbanismo.</p>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section>
+            <h2>CONTATO</h2>
+            <p>Se você busca soluções eficientes baseadas em dados espaciais para tomar decisões mais estratégicas e assertivas, entre em contato conosco. Estamos prontos para entender suas necessidades e oferecer serviços personalizados em geoprocessamento, análise territorial e geração de mapas inteligentes que transformam dados em resultados concretos.</p>
+            <div id="contato">
+                <div>
+                    <div id="info">
+                        <h3>Telefone</h3>
+                        <p>+55 (67) 9 9646-9900</p>
+                    </div>
+                    <div id="info">
+                        <h3>Email</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <form action="cadastro.php" method="get" autocomplete="on">
+
+                    <div>
+                        <p id="formulario">
+                            <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required autocomplete="name" placeholder="Seu Nome">
+                        </p>
+                        <p id="formulario">
+                            <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Seu Email">
+                        </p>
+                    </div>
+                    <p id="texto">
+                        <textarea name="msg" id="imsg" placeholder="Sua mensagem..."></textarea>
+                    </p>
+                    <p id="botao">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="imagens/PB_GEOPROCESSAMENTO_02.png" alt="">
+        <p id="efeito">"Transformando dados em insights"</p>
+        <p>&copy; PB GEOPROCESSAMENTO. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/pedro-leal-barros/" target="_blank">Pedro Rodrigo Leal de Barros</a></p>
+    </footer>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
